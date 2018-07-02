@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+  <!-- This launch file launches the command line function for recording the position of motors while moving.  -->
+  <!-- the bag file name can be changed  -->
+<launch>
+
+<node pkg="rosbag" type="record" name="recoder" output="screen" args="-O craniobot_recorded_file /joint_1command /joint_2command  /joint_3command  /joint_4command /joint_5command  /joint_6command "/> 
+
+</launch>
+

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+
+<node pkg="rosbag" type="play" name="player" output="screen" args=" -r 1.0 --clock //home/asimov/moveit_source/src/craniobot_controller/bag/craniobot_recorded_file.bag /joint_1/command:=/joint_1controller/command /joint_2/command:=/joint_2controller/command  /joint_3/command:=/joint_3controller/command  /joint_4/command:=/joint_4controller/command /joint_5/command:=/joint_5controller/command  /joint_6/command:=/joint_6controller/command "/>
+
+</launch>

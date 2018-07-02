@@ -1,0 +1,43 @@
+<robot
+  name="Part1">
+  <link
+    name="Part1">
+    <inertial>
+      <origin
+        xyz="-1.2649E-18 -0.005 3.06151588455594E-19"
+        rpy="0 0 0" />
+      <mass
+        value="1.5" />
+      <inertia
+        ixx="0.0312625"
+        ixy="-3.3881317890172E-20"
+        ixz="-2.07456385820902E-36"
+        iyy="0.0425"
+        iyz="-1.91268204887633E-18"
+        izz="0.0112625" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Part1/meshes/Part1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Part1/meshes/Part1.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

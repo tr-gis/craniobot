@@ -1,0 +1,43 @@
+<robot
+  name="Part41">
+  <link
+    name="Part41">
+    <inertial>
+      <origin
+        xyz="-1.9816E-06 -0.000311299999999999 0.010597"
+        rpy="0 0 0" />
+      <mass
+        value="8.8004" />
+      <inertia
+        ixx="0.068997768035568"
+        ixy="1.46895650238801E-07"
+        ixz="7.97868588896992E-07"
+        iyy="0.0497493214348372"
+        iyz="-0.00175956734963524"
+        izz="0.0629449029483302" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Part41/meshes/Part41.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Part41/meshes/Part41.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

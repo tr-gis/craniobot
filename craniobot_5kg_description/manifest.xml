@@ -1,0 +1,6 @@
+<package>
+  <description brief="craniobot_5kg_description">craniobot_5kg_description</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

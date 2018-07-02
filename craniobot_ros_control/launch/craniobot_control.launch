@@ -1,0 +1,20 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+
+    <!-- robot state publisher -->
+    <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher"/>
+
+    <node name="craniobot_hw" pkg="craniobot_ros_control" type="craniobot_hw_node">
+
+      <rosparam command="load" ns="arm_controller" file="$(find craniobot_ros_control)/config/controller.yaml" />
+
+    </node>
+
+    
+
+
+    <rosparam file="$(find craniobot_ros_control)/config/joint_trajectory_controller.yaml" command="load"/>
+    <node name="joint_trajectory_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="arm_controller" />
+ </launch>
+

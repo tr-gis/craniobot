@@ -1,0 +1,444 @@
+<robot
+  name="craniobot_5kg_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.018223244149274 0.000559104057890808 -0.0357794703686635"
+        rpy="0 0 0" />
+      <mass
+        value="0.904145454818284" />
+      <inertia
+        ixx="0.00290956519018382"
+        ixy="5.50351995083518E-05"
+        ixz="1.09857315874843E-05"
+        iyy="0.00472192787908941"
+        iyz="1.20942036243524E-06"
+        izz="0.00689174142713364" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-2.83910970002351E-06 0.00032091032402029 0.0557779366136696"
+        rpy="0 0 0" />
+      <mass
+        value="0.235161387716735" />
+      <inertia
+        ixx="0.000523122601475155"
+        ixy="2.61931779425461E-09"
+        ixz="-1.00461864057507E-08"
+        iyy="0.000435931100372013"
+        iyz="8.7133773586281E-05"
+        izz="0.000183617379700543" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-2.1057E-24 -5.5712E-24 3.1415" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="3.84"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.00732285291403031 1.94922110563489E-06 0.137676695150426"
+        rpy="0 0 0" />
+      <mass
+        value="0.288598981552685" />
+      <inertia
+        ixx="0.000660755148913065"
+        ixy="1.50573917246595E-09"
+        ixz="1.7795896939446E-05"
+        iyy="0.000739222512505875"
+        iyz="5.79690442011882E-09"
+        izz="0.000201101662065437" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0 -0.00511 0.11532"
+      rpy="-1.7629 5.4238E-19 -1.5708" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="3.6"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.0536257933494206 0.000108764774472275 0.00134399000620963"
+        rpy="0 0 0" />
+      <mass
+        value="0.184737941254484" />
+      <inertia
+        ixx="9.58491951403439E-05"
+        ixy="4.34900946125455E-07"
+        ixz="-1.33802198594686E-05"
+        iyy="0.000288354152725379"
+        iyz="5.74109711886539E-08"
+        izz="0.000251361031091162" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="-0.0050024 0 0.1824"
+      rpy="0.13414 -1.5708 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="5.62"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.000191591663254553 -0.0053410961636659 0.0822974126008937"
+        rpy="0 0 0" />
+      <mass
+        value="0.150426362073932" />
+      <inertia
+        ixx="0.000213328450186477"
+        ixy="1.22752843779343E-07"
+        ixz="-1.33577658912057E-06"
+        iyy="0.000181511648462945"
+        iyz="1.18291868842664E-05"
+        izz="8.18254243802943E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.11084 0.00024563 0.010498"
+      rpy="-2.6857 -1.5708 -2.5277" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="4.0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.00061752074744631 2.77555756156289E-17 0.0341570403299147"
+        rpy="0 0 0" />
+      <mass
+        value="0.0260876236257683" />
+      <inertia
+        ixx="1.0877376342488E-05"
+        ixy="-1.30019557403535E-19"
+        ixz="-5.5025792514478E-07"
+        iyy="1.64546571424962E-05"
+        iyz="-2.94343949170869E-19"
+        izz="1.45049120738049E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0 -0.014751 0.13046"
+      rpy="-1.65 1.1102E-16 -1.5708" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="3.6"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="0.024067989164535 -0.0150585377699296 2.08166817117217E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0712112754274667" />
+      <inertia
+        ixx="2.49076797081276E-05"
+        ixy="-6.77330500133713E-07"
+        ixz="1.3976043629696E-20"
+        iyy="1.64820060396479E-05"
+        iyz="1.73641754187132E-20"
+        izz="2.96478677236868E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <origin
+      xyz="0 0 0.047362"
+      rpy="-1.5636 -1.5708 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2"
+      upper="4"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_7">
+    <inertial>
+      <origin
+        xyz="0.00195419430926891 0.00606586571308579 -0.0606349111096726"
+        rpy="0 0 0" />
+      <mass
+        value="0.227809475189937" />
+      <inertia
+        ixx="0.000295705276844348"
+        ixy="-3.73467756945066E-06"
+        ixz="-4.85165241237869E-06"
+        iyy="0.000340435546364559"
+        iyz="2.12927702477142E-05"
+        izz="0.000198545651067944" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://craniobot_5kg_description/meshes/link_7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_7"
+    type="fixed">
+    <origin
+      xyz="0.0497 -0.0045605 -0.0011984"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="link_6" />
+    <child
+      link="link_7" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

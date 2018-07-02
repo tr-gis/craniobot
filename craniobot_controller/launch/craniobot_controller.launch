@@ -1,0 +1,44 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+    <!-- Start the Dynamixel motor manager to control all cool400 servos -->
+   <node name="dynamixel_manager" pkg="dynamixel_controllers" type="controller_manager.py" required="true" output="screen">
+        <rosparam>
+            namespace: dxl_manager
+            serial_ports:
+                dynamixel_port:
+                    port_name: "/dev/ttyUSB0"
+                    baud_rate: 1000000
+                    min_motor_id: 0
+                    max_motor_id: 6
+                    update_rate: 20
+        </rosparam>
+    </node>
+    
+      <!-- Load joint controller configuration from YAML file to parameter server -->
+  <rosparam file="$(find craniobot_controller)/config/craniobot.yaml" command="load"/>
+
+    <!-- Start all SmartArm joint controllers -->
+    <node name="controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port dynamixel_port
+                joint_1
+                joint_2		
+				joint_3
+				joint_4
+				joint_5
+				joint_6"
+			     output="screen"/>
+        
+   
+  
+  <!-- Publish combined joint info -->
+  <include file="$(find craniobot_controller)/launch/joint_state_aggregator.launch" />
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find craniobot_5kg_description)/robots/craniobot_5kg_description.URDF'"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen">
+    <rosparam param="source_list">[joint_states]</rosparam>
+    <rosparam param="use_gui">FALSE</rosparam>
+  </node>
+    
+</launch>
+

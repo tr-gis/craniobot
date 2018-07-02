@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: craniobot_5kg_description
+    relative_path: robots/craniobot_5kg_description.URDF
+  SRDF:
+    relative_path: config/craniobot_5kg_description.srdf
+  CONFIG:
+    author_name: gokul
+    author_email: gokul@asimovrobotics.com
+    generated_timestamp: 1512211095
